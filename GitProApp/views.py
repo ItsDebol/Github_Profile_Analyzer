@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
+import requests
+import json
 
-# Create your views here.
+def index(request):
+    yoko = requests.get('https://api.github.com/users/ItsDebol')
+    content = yoko.text
+    return HttpResponse(content)
