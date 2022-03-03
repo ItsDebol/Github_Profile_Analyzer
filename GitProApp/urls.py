@@ -1,6 +1,6 @@
-from django.conf.urls import urls
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    urls('expand/', views.index, name='index'),
+    path('expand/', views.index, name='index'),
 ]
