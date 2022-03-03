@@ -3,6 +3,6 @@ import requests
 import json
 
 def index(request):
-    yoko = requests.get('https://api.github.com/users/raybesiga')
+    yoko = requests.get('https://api.github.com/users/ItsDebol')
     content = yoko.text
-    return HttpResponse(content)
+    return json(content)
