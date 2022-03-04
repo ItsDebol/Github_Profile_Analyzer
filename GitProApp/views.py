@@ -20,12 +20,19 @@ def rendering(request):
     else:
         return render("main.html",data=sessions['data'],graph_y=sessions['graph_y'])
     
-    
-    
+        
     
 def get_user(request) -> json:
     response = requests.get('https://api.github.com/users/ItsDebol')  
     content = response.json()
     userinfo = {"name": content["name"],"email":content["email"], "bio":content["bio"], "followers":content["followers"], "following":content["following"], "Total Number of Public Repos":content["public_repos"]  }
     return JsonResponse(userinfo)
+
+#def meta_repo(request) -> json:
+ #   re = ('https://api.github.com/users/ItsDebol/repos')
+    
+    
+  #  response = requests.get('re')
+   # content = response.json()
+    
     
