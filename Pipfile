@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 django-pipeline = "*"
 requests = "*"
+jsonify = "*"
 
 [dev-packages]
 
